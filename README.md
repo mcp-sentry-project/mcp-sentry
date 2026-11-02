@@ -1,9 +1,10 @@
 # MCP Sentry
 
-Gateway local que verifica alterações em servidores MCP antes de iniciá-los.
-Quando encontra uma mudança em relação à referência aprovada, bloqueia a
-execução e oferece evidências para revisão assistida por IA. A decisão de
-autorizar permanece com o operador.
+O MCP Sentry é um proxy local de segurança para MCP, com verificação de
+integridade e controle de execução. Antes de iniciar o servidor protegido,
+confere sua implementação em relação à referência aprovada. Quando encontra
+uma mudança, bloqueia a execução e oferece evidências para revisão assistida
+por IA. A decisão de autorizar permanece com o operador.
 
 **Distribuição experimental 1.3.5 para Windows.** Este repositório publica
 os pacotes de instalação e as informações de uso do projeto.
@@ -28,7 +29,7 @@ o instalador está no pacote com o nome acima.
   Python oficial, mediante confirmação, conferindo SHA-256 e assinatura.
   Esse download exige internet.
 
-O pacote inclui o gateway, instalador e guias. Não inclui o servidor MCP
+O pacote inclui o proxy, instalador e guias. Não inclui o servidor MCP
 protegido, seu runtime, suas credenciais ou o instalador do Python.
 
 ## Instalação
@@ -73,7 +74,7 @@ relatórios e arquivos de estado podem conter código ou dados locais.
 
 ## Testes e limites
 
-A versão 1.3.5 passou por 222 testes do gateway, com três ignorados, e 30
+A versão 1.3.5 passou por 222 testes do proxy, com três ignorados, e 30
 testes do instalador, além de verificações de instalação, atualização e SDK MCP.
 Uma demonstração manual da 1.3.3 mostra a instalação do Python, do Sentry e
 a configuração no Codex, em Windows confirmado limpo e sem Python pelo operador.
@@ -87,7 +88,7 @@ revisão, e um parecer favorável sozinho não autoriza execução.
 
 ## Licença
 
-O gateway, o instalador e os guias de uso são distribuídos sob a
+O proxy, o instalador e os guias de uso são distribuídos sob a
 [licença MIT](LICENSE).
 
 ## Autores
