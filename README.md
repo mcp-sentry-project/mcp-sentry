@@ -11,9 +11,9 @@ permanece privado durante a preparação; sua abertura será decidida depois.
 
 ## Download
 
-**[Baixar MCP Sentry 1.3.4](https://github.com/davi-padilha/mcp-sentry/releases/download/v1.3.4/mcp-sentry-1.3.4.zip)**
+**[Baixar MCP Sentry 1.3.4](https://github.com/mcp-sentry-project/mcp-sentry/releases/download/v1.3.4/mcp-sentry-1.3.4.zip)**
 
-[Releases e notas de versão](https://github.com/davi-padilha/mcp-sentry/releases)
+[Releases e notas de versão](https://github.com/mcp-sentry-project/mcp-sentry/releases)
 
 Baixe o arquivo `mcp-sentry-1.3.4.zip` anexado à release. Os arquivos
 automáticos “Source code” do GitHub contêm os documentos deste repositório;
@@ -67,7 +67,7 @@ origem do download continua necessária.
 O ZIP contém `README.md` e a pasta `ajuda/`, com guias de configuração,
 atualização, restauração, privacidade e solução de problemas.
 
-Para relatar um problema, [abra uma issue](https://github.com/davi-padilha/mcp-sentry/issues)
+Para relatar um problema, [abra uma issue](https://github.com/mcp-sentry-project/mcp-sentry/issues)
 informando versão, Windows, cliente, etapa e mensagem de erro. Remova
 credenciais e dados pessoais. Compartilhe somente os trechos necessários;
 relatórios e arquivos de estado podem conter código ou dados locais.
