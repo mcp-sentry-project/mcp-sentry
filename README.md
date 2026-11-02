@@ -6,8 +6,7 @@ execução e oferece evidências para revisão assistida por IA. A decisão de
 autorizar permanece com o operador.
 
 **Distribuição experimental 1.3.5 para Windows.** Este repositório publica
-os pacotes de instalação e as informações de uso do projeto. O repositório
-permanece privado durante a preparação; sua abertura será decidida depois.
+os pacotes de instalação e as informações de uso do projeto.
 
 ## Download
 
@@ -72,32 +71,27 @@ informando versão, Windows, cliente, etapa e mensagem de erro. Remova
 credenciais e dados pessoais. Compartilhe somente os trechos necessários;
 relatórios e arquivos de estado podem conter código ou dados locais.
 
-## Estado e limites
+## Testes e limites
 
-Consulte o [resumo de validação](VALIDACAO.md) e o
-[roteiro de teste em Windows limpo](TESTE-WINDOWS-LIMPO.md).
+A versão 1.3.5 passou por 222 testes do gateway, com três ignorados, e 30
+testes do instalador, além de verificações de instalação, atualização e SDK MCP.
+Uma demonstração manual da 1.3.3 mostra a instalação do Python, do Sentry e
+a configuração no Codex, em Windows confirmado limpo e sem Python pelo operador.
+Essa demonstração não é uma execução manual da 1.3.5 nem de todas as combinações
+de clientes e arquiteturas.
 
 O Sentry é um protótipo: depende de uma referência inicial e de um ambiente
 confiáveis. Cobre a rota e os arquivos configurados; não é uma sandbox.
 Conexões diretas paralelas ficam fora dessa proteção. A IA pode errar na
 revisão, e um parecer favorável sozinho não autoriza execução.
 
-A [demonstração manual da versão 1.3.3](DEMO-INSTALADOR.md) mostra a instalação
-do Python, do Sentry e a configuração no Codex. O operador confirmou Windows
-limpo e sem Python. Essa evidência complementa os testes automatizados; não
-representa teste manual dos pacotes posteriores nem de todos os clientes e
-arquiteturas. Não há declaração de compatibilidade universal.
-
 ## Licença
 
-O gateway, o instalador e os guias de uso são licenciados sob a
-[MIT](LICENSE), que permite inclusive uso comercial e versões modificadas
-fechadas, preservando os avisos exigidos. O wheel inclui os módulos Python
-do gateway. A licença é incluída nos pacotes a partir da versão 1.3.4.
+O gateway, o instalador e os guias de uso são distribuídos sob a
+[licença MIT](LICENSE).
 
 ## Autores
 
 - [Davi Girardi Padilha](https://github.com/davi-padilha)
 - [Pedro Henrique Astolfi Gonçalves](https://github.com/P3dro0406)
 
-A partir da 1.3.5, o ZIP e o wheel também usam o nome completo Davi Girardi Padilha. As entregas anteriores foram preservadas sem alteração.
