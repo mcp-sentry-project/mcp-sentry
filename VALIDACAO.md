@@ -1,41 +1,49 @@
-# Validação da distribuição 1.3.4
+# Validação da distribuição 1.3.5
 
 Construção e validação técnica concluídas em **2026-11-02**.
 
-## Resultados
+A 1.3.5 corrige o nome para **Davi Girardi Padilha** no README do pacote,
+na licença da raiz do ZIP, na licença do wheel e nos metadados de autoria.
+Pedro Henrique Astolfi Gonçalves permanece nos avisos de autoria.
+A lógica de proteção e revisão não mudou. As versões anteriores foram preservadas.
+
+## Resultados desta construção
 
 - Gateway: 225 testes, 222 aprovados e 3 ignorados.
-- Instalador: 30 testes aprovados. Rede e instalação do Python simuladas nas fronteiras do sistema operacional nessa bateria.
+- Instalador: 30 testes aprovados.
 - Os 19 módulos conferem entre fonte, wheel e instalação.
-- Instalação limpa do gateway, atualização desde 1.0.0, caminhos com espaços,
-  lançador CMD e funcionamento após remover a pasta extraída passaram.
-- Menus e configuração em perfis fictícios de Codex e Claude Desktop passaram,
-  com preservação das demais entradas e backups.
-- Transporte stdio e SDK MCP passaram, incluindo bloqueio do backend alterado,
-  revisão separada, uso único e aceitação permanente.
-- A licença MIT confere com a fonte na raiz do ZIP e no wheel. Sua cópia junto
-  à ajuda instalada também foi verificada.
+- Instalação limpa do Sentry em novo ambiente, atualização desde 1.0.0,
+  caminhos com espaços, menus de Codex e Claude Desktop em perfis fictícios,
+  lançador CMD e execução sem a pasta extraída passaram.
+- Transporte stdio e SDK MCP passaram, incluindo bloqueio antes da execução
+  do backend alterado, revisão separada, uso único e aceitação permanente.
+- A licença é preservada junto à ajuda instalada. O nome completo foi
+  conferido diretamente nos arquivos e nos metadados do ZIP e do wheel.
+
+## O que significa instalação limpa neste registro
+
+O instalador do Sentry foi executado de fato em uma pasta e um ambiente novos,
+na máquina de desenvolvimento, usando Python já disponível. Os perfis dos
+clientes e os servidores MCP eram fictícios e isolados.
+
+A ausência de Python, o download e a instalação do Python foram simulados
+nas fronteiras do sistema operacional nos 30 testes do instalador. Isso
+verifica o fluxo do programa, mas não equivale a instalar Python de fato
+em uma VM Windows sem Python. Esse teste de máquina limpa continua pendente,
+assim como o fluxo completo nas interfaces gráficas dos clientes em outra máquina.
+
+Os downloads reais dos instaladores Python para x64, x86 e ARM64 tiveram
+SHA-256 e assinatura conferidos na 1.3.3 em 25/10/2026, sem executá-los.
+Essa verificação de rede não foi repetida na 1.3.5.
 
 ## Pacote
 
-O ZIP contém doze arquivos, incluindo a licença e a lista de somas.
+O ZIP contém doze arquivos, incluindo a licença MIT e a lista de somas.
 
 ```text
-Arquivo: mcp-sentry-1.3.4.zip
-SHA-256: a186679bd77f35953882d82ae3925955b38a0f4194c3c88fc5314659bf1c8c63
+Arquivo: mcp-sentry-1.3.5.zip
+SHA-256: bf2998642c8f944469f5f07decb5036029297d21566cef730fbe07634518ea60
 ```
 
-A 1.3.3 permanece preservada sem alterações em seus anexos. Os downloads reais
-dos instaladores Python para x64, x86 e ARM64 tiveram hash e assinatura
-conferidos na validação da 1.3.3 em 25/10/2026; essa verificação de rede não foi
-repetida na 1.3.4. Não foram executados instaladores Python nessa verificação.
-
-## Limites e pendências
-
-O repositório permanece privado durante a preparação. Não foi realizada
-instalação efetiva do Python em Windows sem Python, nem teste completo nas
-interfaces gráficas dos clientes em outra máquina. Os testes usam perfis e
-servidores fictícios; não substituem essas verificações.
-
-O [roteiro de Windows limpo](TESTE-WINDOWS-LIMPO.md) continua pendente.
-Não houve nova bateria com modelos. O Sentry continua sendo um protótipo.
+O repositório permanece privado. O [roteiro de Windows limpo](TESTE-WINDOWS-LIMPO.md)
+continua pendente. Não houve nova bateria com modelos.

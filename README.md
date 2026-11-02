@@ -5,17 +5,17 @@ Quando encontra uma mudança em relação à referência aprovada, bloqueia a
 execução e oferece evidências para revisão assistida por IA. A decisão de
 autorizar permanece com o operador.
 
-**Distribuição experimental 1.3.4 para Windows.** Este repositório publica
+**Distribuição experimental 1.3.5 para Windows.** Este repositório publica
 os pacotes de instalação e as informações de uso do projeto. O repositório
 permanece privado durante a preparação; sua abertura será decidida depois.
 
 ## Download
 
-**[Baixar MCP Sentry 1.3.4](https://github.com/mcp-sentry-project/mcp-sentry/releases/download/v1.3.4/mcp-sentry-1.3.4.zip)**
+**[Baixar MCP Sentry 1.3.5](https://github.com/mcp-sentry-project/mcp-sentry/releases/download/v1.3.5/mcp-sentry-1.3.5.zip)**
 
 [Releases e notas de versão](https://github.com/mcp-sentry-project/mcp-sentry/releases)
 
-Baixe o arquivo `mcp-sentry-1.3.4.zip` anexado à release. Os arquivos
+Baixe o arquivo `mcp-sentry-1.3.5.zip` anexado à release. Os arquivos
 automáticos “Source code” do GitHub contêm os documentos deste repositório;
 o instalador está no pacote com o nome acima.
 
@@ -46,16 +46,16 @@ Para proteger outro MCP ou atualizar, abra novamente o `INSTALAR.cmd` do pacote.
 
 ## Integridade do download
 
-SHA-256 do ZIP 1.3.4:
+SHA-256 do ZIP 1.3.5:
 
 ```text
-a186679bd77f35953882d82ae3925955b38a0f4194c3c88fc5314659bf1c8c63
+bf2998642c8f944469f5f07decb5036029297d21566cef730fbe07634518ea60
 ```
 
 No PowerShell, na pasta do download:
 
 ```powershell
-Get-FileHash .\mcp-sentry-1.3.4.zip -Algorithm SHA256
+Get-FileHash .\mcp-sentry-1.3.5.zip -Algorithm SHA256
 ```
 
 Compare o resultado com o valor acima. O instalador também confere as somas
@@ -99,4 +99,4 @@ do gateway. A licença é incluída nos pacotes a partir da versão 1.3.4.
 - [Davi Girardi Padilha](https://github.com/davi-padilha)
 - [Pedro Henrique Astolfi Gonçalves](https://github.com/P3dro0406)
 
-O ZIP 1.3.4 foi preservado e ainda usa a forma abreviada Davi Padilha. Os documentos e as fontes para próximas entregas usam Davi Girardi Padilha.
+A partir da 1.3.5, o ZIP e o wheel também usam o nome completo Davi Girardi Padilha. As entregas anteriores foram preservadas sem alteração.
