@@ -96,5 +96,7 @@ do gateway. A licença é incluída nos pacotes a partir da versão 1.3.4.
 
 ## Autores
 
-- [Davi Padilha](https://github.com/davi-padilha)
+- [Davi Girardi Padilha](https://github.com/davi-padilha)
 - [Pedro Henrique Astolfi Gonçalves](https://github.com/P3dro0406)
+
+O ZIP 1.3.4 foi preservado e ainda usa a forma abreviada Davi Padilha. Os documentos e as fontes para próximas entregas usam Davi Girardi Padilha.
