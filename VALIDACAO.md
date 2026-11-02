@@ -1,45 +1,41 @@
-# Validação da distribuição 1.3.3
+# Validação da distribuição 1.3.4
 
-Validação técnica original concluída em **25/10/2026**. Esta página resume os
-registros da construção; não representa uma nova execução de toda a bateria.
+Construção e validação técnica concluídas em **2026-11-02**.
 
-## Resultados registrados
+## Resultados
 
-- Gateway: 225 testes, com 222 aprovados e três ignorados.
-- Instalador: 30 testes aprovados, incluindo consentimento, menus,
-  integridade, recuperação e falhas. Rede e instalação do Python foram
-  simuladas nas fronteiras do sistema operacional nessa bateria.
-- Downloads reais dos instaladores oficiais Python para x64, x86 e ARM64:
-  SHA-256 e Authenticode conferidos, com editor Python Software Foundation.
-  Os instaladores Python não foram executados.
-- Instalação do wheel, caminhos com espaços, lançador CMD, ajuda instalada,
-  recusa de arquivos alterados e uso após remover a pasta extraída passaram.
-- Atualização desde 1.0.0 preservou estado e configuração.
-- Configuração e menus para Codex e Claude Desktop passaram em perfis
-  descartáveis, com servidores fictícios e backups.
-- Transporte stdio e SDK MCP: chamada normal, bloqueio antes da inicialização
-  do backend alterado, revisão separada, autorização de uso único e aceitação
-  permanente passaram.
-- Os 19 módulos conferiram entre fonte, wheel e instalação.
+- Gateway: 225 testes, 222 aprovados e 3 ignorados.
+- Instalador: 30 testes aprovados. Rede e instalação do Python simuladas nas fronteiras do sistema operacional nessa bateria.
+- Os 19 módulos conferem entre fonte, wheel e instalação.
+- Instalação limpa do gateway, atualização desde 1.0.0, caminhos com espaços,
+  lançador CMD e funcionamento após remover a pasta extraída passaram.
+- Menus e configuração em perfis fictícios de Codex e Claude Desktop passaram,
+  com preservação das demais entradas e backups.
+- Transporte stdio e SDK MCP passaram, incluindo bloqueio do backend alterado,
+  revisão separada, uso único e aceitação permanente.
+- A licença MIT confere com a fonte na raiz do ZIP e no wheel. Sua cópia junto
+  à ajuda instalada também foi verificada.
 
-## Conferência para publicação
+## Pacote
 
-Em **02/11/2026**, o ZIP existente foi reconferido para publicação: hash
-externo correspondente ao registro da construção e dez arquivos internos
-correspondentes às somas incluídas. O pacote contém onze arquivos ao todo,
-incluindo a própria lista de somas. O ZIP validado foi preservado sem alteração.
+O ZIP contém doze arquivos, incluindo a licença e a lista de somas.
 
 ```text
-Arquivo: mcp-sentry-1.3.3.zip
-SHA-256: bcf3c200df8bc11dc9e50e4cf3510bce5a17d8b948458468a8a8f0599895c5f8
+Arquivo: mcp-sentry-1.3.4.zip
+SHA-256: a186679bd77f35953882d82ae3925955b38a0f4194c3c88fc5314659bf1c8c63
 ```
 
-## Verificações ainda pendentes
+A 1.3.3 permanece preservada sem alterações em seus anexos. Os downloads reais
+dos instaladores Python para x64, x86 e ARM64 tiveram hash e assinatura
+conferidos na validação da 1.3.3 em 25/10/2026; essa verificação de rede não foi
+repetida na 1.3.4. Não foram executados instaladores Python nessa verificação.
 
-- Instalação efetiva do Python em uma VM ou máquina Windows sem Python.
-- Instalação e configuração completas nas interfaces gráficas dos clientes
-  em outra máquina.
+## Limites e pendências
 
-Os testes em perfis fictícios não substituem essas verificações. O roteiro
-está em [TESTE-WINDOWS-LIMPO.md](TESTE-WINDOWS-LIMPO.md). A distribuição é
-publicada como experimental com esses limites explícitos.
+O repositório permanece privado durante a preparação. Não foi realizada
+instalação efetiva do Python em Windows sem Python, nem teste completo nas
+interfaces gráficas dos clientes em outra máquina. Os testes usam perfis e
+servidores fictícios; não substituem essas verificações.
+
+O [roteiro de Windows limpo](TESTE-WINDOWS-LIMPO.md) continua pendente.
+Não houve nova bateria com modelos. O Sentry continua sendo um protótipo.

@@ -5,16 +5,17 @@ Quando encontra uma mudança em relação à referência aprovada, bloqueia a
 execução e oferece evidências para revisão assistida por IA. A decisão de
 autorizar permanece com o operador.
 
-**Distribuição experimental 1.3.3 para Windows.** Este repositório publica
-os pacotes de instalação e as informações de uso do projeto.
+**Distribuição experimental 1.3.4 para Windows.** Este repositório publica
+os pacotes de instalação e as informações de uso do projeto. O repositório
+permanece privado durante a preparação; sua abertura será decidida depois.
 
 ## Download
 
-**[Baixar MCP Sentry 1.3.3](https://github.com/davi-padilha/mcp-sentry/releases/download/v1.3.3/mcp-sentry-1.3.3.zip)**
+**[Baixar MCP Sentry 1.3.4](https://github.com/davi-padilha/mcp-sentry/releases/download/v1.3.4/mcp-sentry-1.3.4.zip)**
 
 [Releases e notas de versão](https://github.com/davi-padilha/mcp-sentry/releases)
 
-Baixe o arquivo `mcp-sentry-1.3.3.zip` anexado à release. Os arquivos
+Baixe o arquivo `mcp-sentry-1.3.4.zip` anexado à release. Os arquivos
 automáticos “Source code” do GitHub contêm os documentos deste repositório;
 o instalador está no pacote com o nome acima.
 
@@ -45,16 +46,16 @@ Para proteger outro MCP ou atualizar, abra novamente o `INSTALAR.cmd` do pacote.
 
 ## Integridade do download
 
-SHA-256 do ZIP 1.3.3:
+SHA-256 do ZIP 1.3.4:
 
 ```text
-bcf3c200df8bc11dc9e50e4cf3510bce5a17d8b948458468a8a8f0599895c5f8
+a186679bd77f35953882d82ae3925955b38a0f4194c3c88fc5314659bf1c8c63
 ```
 
 No PowerShell, na pasta do download:
 
 ```powershell
-Get-FileHash .\mcp-sentry-1.3.3.zip -Algorithm SHA256
+Get-FileHash .\mcp-sentry-1.3.4.zip -Algorithm SHA256
 ```
 
 Compare o resultado com o valor acima. O instalador também confere as somas
@@ -88,6 +89,12 @@ Windows ou clientes.
 
 ## Licença
 
-A licença de distribuição ainda está em definição pelo autor. Esta publicação
-não declara o projeto sob uma licença de código aberto. O wheel incluído no
-ZIP contém os módulos Python do gateway.
+O gateway, o instalador e os guias de uso são licenciados sob a
+[MIT](LICENSE), que permite inclusive uso comercial e versões modificadas
+fechadas, preservando os avisos exigidos. O wheel inclui os módulos Python
+do gateway. A licença é incluída nos pacotes a partir da versão 1.3.4.
+
+## Autores
+
+- [Davi Padilha](https://github.com/davi-padilha)
+- [Pedro Henrique Astolfi Gonçalves](https://github.com/P3dro0406)

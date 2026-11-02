@@ -8,7 +8,7 @@ e data. Preserve um snapshot inicial para repetir o teste.
 
 1. Prepare um servidor MCP de teste sem dados pessoais ou credenciais reais,
    usando um runtime que não instale Python. Confirme uma chamada direta no cliente.
-2. Baixe o ZIP 1.3.3 da release e confira seu SHA-256.
+2. Baixe o ZIP 1.3.4 da release e confira seu SHA-256.
 3. Extraia em um caminho com espaços e abra `INSTALAR.cmd` por duplo clique.
 4. Primeiro recuse o download do Python. Confira a mensagem e a saída sem
    instalação. Abra novamente e aceite o download.
