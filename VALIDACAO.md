@@ -29,8 +29,11 @@ clientes e os servidores MCP eram fictícios e isolados.
 A ausência de Python, o download e a instalação do Python foram simulados
 nas fronteiras do sistema operacional nos 30 testes do instalador. Isso
 verifica o fluxo do programa, mas não equivale a instalar Python de fato
-em uma VM Windows sem Python. Esse teste de máquina limpa continua pendente,
-assim como o fluxo completo nas interfaces gráficas dos clientes em outra máquina.
+em uma VM Windows sem Python. Separadamente, a
+[demonstração manual da 1.3.3](DEMO-INSTALADOR.md), analisada em 02/11/2026,
+mostra Python instalado pelo assistente, Sentry instalado e configuração no
+Codex. O operador confirmou que o Windows estava limpo e sem Python.
+Portanto, há evidência manual desse fluxo; ela não é uma execução do ZIP 1.3.5.
 
 Os downloads reais dos instaladores Python para x64, x86 e ARM64 tiveram
 SHA-256 e assinatura conferidos na 1.3.3 em 25/10/2026, sem executá-los.
@@ -46,4 +49,5 @@ SHA-256: bf2998642c8f944469f5f07decb5036029297d21566cef730fbe07634518ea60
 ```
 
 O repositório permanece privado. O [roteiro de Windows limpo](TESTE-WINDOWS-LIMPO.md)
-continua pendente. Não houve nova bateria com modelos.
+identifica o trecho já demonstrado e os cenários adicionais ainda não exibidos.
+Não houve nova bateria com modelos.

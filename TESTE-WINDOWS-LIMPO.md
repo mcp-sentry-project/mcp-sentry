@@ -1,10 +1,15 @@
 # Teste em Windows limpo
 
-**Estado: pendente de execução.** Este roteiro não é evidência de aprovação.
+**Estado: fluxo principal demonstrado manualmente na versão 1.3.3.**
+Veja a [análise da gravação](DEMO-INSTALADOR.md). O operador confirmou Windows
+limpo e sem Python. O vídeo mostra o download e a instalação do Python,
+instalação do Sentry e configuração no Codex. A condição de ausência total
+de teste em Windows limpo foi corrigida em 02/11/2026.
 
-Já houve instalação limpa do Sentry em ambientes novos na máquina de
-desenvolvimento, usando Python existente. Este roteiro cobre a etapa adicional
-de instalar Python de fato em um Windows sem Python e usar os clientes reais.
+Os testes automatizados também instalaram o Sentry em ambientes novos usando
+Python existente. Este roteiro completo serve para repetição com a versão
+atual e ampliação de cobertura: não considera aprovados os cenários que o
+vídeo não mostra, como recusa do download, alteração/bloqueio e Claude Desktop.
 
 Use uma VM ou máquina descartável sem Python instalado, com internet e um
 cliente compatível. Anote versão e arquitetura do Windows, versão do cliente

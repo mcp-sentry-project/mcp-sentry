@@ -82,10 +82,11 @@ confiáveis. Cobre a rota e os arquivos configurados; não é uma sandbox.
 Conexões diretas paralelas ficam fora dessa proteção. A IA pode errar na
 revisão, e um parecer favorável sozinho não autoriza execução.
 
-A instalação efetiva do Python em um Windows sem Python e o fluxo completo
-nas interfaces gráficas dos clientes em outra máquina ainda não foram
-validados. Não há declaração de compatibilidade universal com versões de
-Windows ou clientes.
+A [demonstração manual da versão 1.3.3](DEMO-INSTALADOR.md) mostra a instalação
+do Python, do Sentry e a configuração no Codex. O operador confirmou Windows
+limpo e sem Python. Essa evidência complementa os testes automatizados; não
+representa teste manual dos pacotes posteriores nem de todos os clientes e
+arquiteturas. Não há declaração de compatibilidade universal.
 
 ## Licença
 
