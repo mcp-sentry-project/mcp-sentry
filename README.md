@@ -1,8 +1,8 @@
 # MCP Sentry
 
 O MCP Sentry é um proxy local de segurança para MCP, com verificação de
-integridade e controle de execução. Antes de iniciar o servidor protegido,
-confere sua implementação em relação à referência aprovada. Quando encontra
+integridade e controle de execução. Antes de iniciar o servidor protegido, o
+Sentry confere sua implementação em relação à referência aprovada. Quando encontra
 uma mudança, bloqueia a execução e oferece evidências para revisão assistida
 por IA. A decisão de autorizar permanece com o operador.
 
@@ -26,10 +26,10 @@ o instalador está no pacote com o nome acima.
   configuração para Codex e Claude Desktop; outros clientes exigem configuração manual.
 - Servidor MCP de sua escolha já funcionando, com seu runtime e credenciais.
 - Python 3.11+ com pip/venv. Se faltar, o instalador oferece baixar e instalar
-  Python oficial, mediante confirmação, conferindo SHA-256 e assinatura.
+  o Python oficial, mediante confirmação, conferindo SHA-256 e assinatura.
   Esse download exige internet.
 
-O pacote inclui o proxy, instalador e guias. Não inclui o servidor MCP
+O pacote inclui o proxy, o instalador e os guias. Não inclui o servidor MCP
 protegido, seu runtime, suas credenciais ou o instalador do Python.
 
 ## Instalação
@@ -38,10 +38,11 @@ protegido, seu runtime, suas credenciais ou o instalador do Python.
 2. Abra a pasta `instalar-mcp-sentry` e execute `INSTALAR.cmd`.
 3. Ao concluir, aceite abrir o assistente, selecione o cliente e o servidor MCP
    e confira as confirmações de descoberta, aprovação inicial e configuração.
-4. Reinicie as conexões do cliente e confira o funcionamento pelo Sentry.
+4. Reinicie as conexões do cliente e confira se o servidor MCP funciona pelo
+   Sentry.
 
-A instalação padrão fica em `%LOCALAPPDATA%\MCP-Sentry-Gateway`.
-Depois de uma instalação nova concluída, o ZIP e a pasta extraída podem ser removidos.
+A instalação padrão fica em `%LOCALAPPDATA%\MCP-Sentry-Gateway`. Depois de
+uma instalação nova concluída, o ZIP e a pasta extraída podem ser removidos.
 Para proteger outro MCP ou atualizar, abra novamente o `INSTALAR.cmd` do pacote.
 
 ## Integridade do download
@@ -74,16 +75,18 @@ relatórios e arquivos de estado podem conter código ou dados locais.
 
 ## Testes e limites
 
-A versão 1.3.5 passou por 222 testes do proxy, com três ignorados, e 30
-testes do instalador, além de verificações de instalação, atualização e SDK MCP.
-Uma demonstração manual da 1.3.3 mostra a instalação do Python, do Sentry e
-a configuração no Codex, em Windows confirmado limpo e sem Python pelo operador.
-Essa demonstração não é uma execução manual da 1.3.5 nem de todas as combinações
-de clientes e arquiteturas.
+A versão 1.3.5 passou por 222 testes automatizados do proxy (três ignorados)
+e 30 do instalador, além de verificações de instalação, atualização e SDK MCP.
+
+A demonstração manual registrada foi feita na versão 1.3.3, em um Windows
+sem Python, confirmado limpo pelo operador: instalação do Python, do Sentry e
+configuração no Codex. Ela não cobre a 1.3.5 nem todas as combinações de
+clientes e arquiteturas.
 
 O Sentry é um protótipo: depende de uma referência inicial e de um ambiente
 confiáveis. Cobre a rota e os arquivos configurados; não é uma sandbox.
-Conexões diretas paralelas ficam fora dessa proteção. A IA pode errar na
+Conexões diretas ao servidor, sem passar pelo Sentry, ficam fora dessa
+proteção. A IA pode errar na
 revisão, e um parecer favorável sozinho não autoriza execução.
 
 ## Licença
